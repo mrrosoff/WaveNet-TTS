@@ -1,0 +1,15 @@
+numpy
+pandas
+matplotlib
+
+iPython
+jupyter
+tqdm
+requests
+
+tensorflow
+librosa
+PyYAML
+xlwt
+
+autopep8

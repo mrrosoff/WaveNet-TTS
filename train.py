@@ -5,9 +5,28 @@ from os.path import join, exists;
 import tensorflow as tf;
 import pandas as pd;
 from WaveNet import WaveNet, calculate_receptive_field;
-from create_dataset import parse_function_generator;
 
 batch_size = 8;
+
+def parse_function_generator():
+
+    def parse_function(serialized_example):
+        feature = tf.io.parse_single_example(
+            serialized_example,
+            features={
+                'audio': tf.io.VarLenFeature(dtype=tf.int64),
+                'length': tf.io.FixedLenFeature((), dtype=tf.int64),
+                'category': tf.io.FixedLenFeature((), dtype=tf.int64),
+                'transcript': tf.io.FixedLenFeature((), dtype=tf.string)
+            }
+        )
+        length = feature['length']
+        audio = tf.sparse.to_dense(feature['audio'], default_value=0)
+        audio = tf.cast(tf.reshape(audio, (length, 1)), dtype=tf.float32)
+        category = tf.cast(feature['category'], dtype=tf.float32)
+        return audio, category
+
+    return parse_function
 
 def train():
 

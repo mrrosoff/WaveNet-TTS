@@ -1,0 +1,6 @@
+---
+
+  threading: false
+  sample_rate: 16000
+  silence_threshold: 0.3
+  quantization_channels: 256
