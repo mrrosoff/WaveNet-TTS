@@ -1,0 +1,46 @@
+# Data Files
+
+VCTK-Corpus
+VCTK-Corpus.tar.gz
+dataset
+
+# IDE Files
+
+.idea
+.vscode
+
+# MacOS Files
+
+.DS_Store
+
+# Node Files
+
+node_modules
+
+# Python files
+
+/venv
+/env
+__pycache__
+
+# Output Files
+
+build
+coverage
+dist
+lib
+out
+
+# Python Files
+
+__pycache__
+
+# Server Files
+
+.env
+dependency-reduced-pom.xml
+target
+
+# Test Files
+
+.nyc_output
