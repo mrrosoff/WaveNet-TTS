@@ -1,5 +1,7 @@
-# wavenet-tf2.0
-this project implements a wavenet with tensorflow 2.0
+# WaveNet-TTS
+
+### this project implements a wavenet with tensorflow 2.0
+#### Forked From [breadbread1984/wavenet-tf2.0](https://github.com/breadbread1984/wavenet-tf2.0)
 
 ## download dataset
 
